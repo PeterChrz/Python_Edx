@@ -1,0 +1,133 @@
+OK. You only need three functions: print, range and len. You can also use append if you're using lists & you might like the function enumerate. You can use others but you don't need them and I recommend you solve these problems without them before you try for functional approaches. So what tools? Loops, comparison, indexing, slicing. Nothing more is needed.
+
+Sketch out the solution first, then when a 10 year old can do it, then code.
+
+##############################################
+Loops
+##############################################
+
+s = 'hiyou'
+
+for c in s:
+    print(c, end=', ')
+print("\nthat was priting c's\n")
+
+for i in range(len(s)):
+    print(i, s[i], end = ', ')
+print("\nthat was printing index & indexed value's\n")
+
+for i, c in enumerate(s):
+    print(i, c, end = ', ')
+print("\n enumerate is an effective way of getting index & char\n")
+
+######
+Output:
+h, i, y, o, u,
+that was printing c's
+
+0 h, 1 i, 2 y, 3 o, 4 u,
+that was printing index & indexed values
+
+0 h, 1 i, 2 y, 3 o, 4 u,
+enumerate is an efficient way of getting index & char
+
+
+
+##############################################
+slicing and comparison
+##############################################
+
+s = 'hiyou'
+
+for i in range(len(s)):
+    print(s[i: i+2], end = ', ')
+
+for i in range(len(s) -1):
+    print(s[i] == s[i+1], end = ', ')
+
+######
+Output:
+hi, iy, yo, oo, ou, uu
+
+False, False, False, True, False,
+
+##############################################
+Loops, Accumulation, index or strings
+##############################################
+
+s = 'hiyou'
+print()
+
+#lets save index numbers.
+lst = []
+for i in range(len(s)):
+    if not i % 2:
+        lst.append(i)
+    print(lst, end = ', ')
+print("n so we filtered for evenness & stored results \n")
+
+
+# Save characters in a string
+newstring = ""
+for c in s:
+    if c in 'hio':
+        newstring += c
+    print(newstring, end = ', ')
+print("\n we filtered for inclusion & store the in crowd\n")
+
+
+# Save characters in a list then join it
+lst = []
+for c in s:
+    if c in 'yu':
+        lst.append(c)
+    print(lst, end = ', ')
+strung_list = "".join.list
+print("\n Strung_list is ", strung_list)
+
+
+##############################################
+Compare String Lengths, characters and space
+##############################################
+
+s = 'hiyoou'
+s2 = 'xyz'
+
+print('\n testing in:', 'i' in s, 'x' in s)
+## testing in: True False
+
+print('testing in:', s2[0] in s, s2[1] in s)
+## testing in: False True
+
+print('testing lengths:', len(s) > len(s2))
+## Testing lengths: True
+
+print('where is space?', ' ' < 'a')
+## where is space? True
+
+s3 = s + ' '
+print('added space:', s3, len(s), len(s3))
+## added space: hiyoou 6 7
+
+
+
+https://discussions.edx.org/course-v1:MITx+6.00.1x+1T2024/category/block-v1:MITx+6.00.1x+1T2024+type@vertical+block@62afe483b76c411d893f2bae70b574ec/posts/65b48035f09afd04a46f1102?inContextSidebar
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
