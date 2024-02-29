@@ -13,10 +13,10 @@ def gcdIter(a, b):
     returns: a positive integer, the greatest common divisor of a & b.
     '''
     # Your code here
-  
+    
     if a < b: 
         a, b = b, a
-    
+        
     d = b
     
     while d > 0:
@@ -40,4 +40,4 @@ def gcdIter(a, b):
     return largest
 '''
 
-print(gcdIter(8, 4))
+print(gcdIter(3, 9))
